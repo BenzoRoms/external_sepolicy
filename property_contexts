@@ -75,3 +75,5 @@ nfc.                    u:object_r:nfc_prop:s0
 # emulator/goldfish.
 config.                 u:object_r:config_prop:s0
 dalvik.                 u:object_r:dalvik_prop:s0
+
+persist.libc.malloc.    u:object_r:system_prop:s0
