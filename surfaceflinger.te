@@ -61,6 +61,8 @@ allow surfaceflinger permission_service:service_manager find;
 allow surfaceflinger power_service:service_manager find;
 allow surfaceflinger surfaceflinger_service:service_manager { add find };
 allow surfaceflinger window_service:service_manager find;
+allow surfaceflinger system_data_file:dir rw_dir_perms;
+allow surfaceflinger system_data_file:sock_file create_file_perms;
 
 ###
 ### Neverallow rules
