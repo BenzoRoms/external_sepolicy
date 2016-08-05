@@ -66,6 +66,9 @@ allow zygote storage_file:dir { search mounton };
 # Handle --invoke-with command when launching Zygote with a wrapper command.
 allow zygote zygote_exec:file rx_file_perms;
 
+# Needed for overlays
+allow zygote overlay_service:service_manager { find };
+
 userdebug_or_eng(`
   # Allow zygote to create and write method traces in /data/misc/trace.
   allow zygote method_trace_data_file:dir w_dir_perms;
